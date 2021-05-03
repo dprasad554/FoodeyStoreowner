@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.Grocery_AddMenu_Activity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:titleTextColor="@color/white"
+                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_AddName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/AddName"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_AddName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Item Name"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:background="@drawable/text_radius"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MRP"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/colorPrimary"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_MRP"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter MRP"
+                                android:inputType="text"
+                                android:textSize="16sp"
+                                android:padding="10dp"
+                                android:background="@drawable/text_radius"
+                                />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp"
+                        android:padding="8dp"
+                        android:text="Description"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_In"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/In"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/text_radius"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:layout_marginTop="8dp">
+
+                        <Spinner
+                            android:id="@+id/spnSelect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:autofillHints="Select"
+                            />
+
+                    </LinearLayout>
+
+
+                    <EditText
+                            android:id="@+id/et_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:hint="Enter Description"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:background="@drawable/text_radius"
+                            />
+
+                    <TextView
+                        android:id="@+id/tv_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Discount"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Discount"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:background="@drawable/text_radius"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tv_specialcashback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CashBack"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_cashback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter CashBack"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:background="@drawable/text_radius"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tv_buyOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Get One Buy One:"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_extraoffer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Extra Offer"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:background="@drawable/text_radius"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_AddImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/AddImage"
+                        android:textSize="18sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <ImageView
+                            android:id="@+id/et_addImage"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_addimage"
+                            android:layout_centerInParent="true"
+                            />
+
+                        <ImageView
+                            android:id="@+id/et_imageDisplay"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:gravity="top"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/text_radius" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/AddSubmit"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_margin="20dp"
+                        android:background="@color/colorPrimary"
+                        android:onClick="doSubmit"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

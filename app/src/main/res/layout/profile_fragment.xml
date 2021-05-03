@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".restaurant.activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/colorNewBlue"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_ownerImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:padding="8dp"
+                    android:src="@drawable/man_" />
+
+                <TextView
+                    android:id="@+id/tv_ownerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/ownerName"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_ownerDesignation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/designation"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/dEarn"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="200dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_money"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/salary_" />
+
+                            <TextView
+                                android:id="@+id/tv_daily"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iv_money"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/daily"
+                                android:textColor="@color/colorBlue"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="0.5"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/nOrders"
+                        android:layout_width="200dp"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="200dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_order"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/order" />
+
+                            <TextView
+                                android:id="@+id/tv_order"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iv_order"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/orders"
+                                android:textColor="@color/colorBlue"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear_qrMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/iv_qrCode"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:src="@drawable/communications"
+                        android:layout_marginLeft="@dimen/layout_margin5"/>
+
+                    <TextView
+                        android:id="@+id/tv_qrCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="6dp"
+                        android:text="Qr Code"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_addMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/iv_addMenu"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_addmenu"
+                        android:layout_marginLeft="@dimen/layout_margin5"/>
+
+                    <TextView
+                        android:id="@+id/tv_addMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="6dp"
+                        android:text="@string/menuAdd"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/iv_menuList"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_menu"
+                        android:layout_marginLeft="@dimen/layout_margin5"/>
+
+                    <TextView
+                        android:id="@+id/tv_menuList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="6dp"
+                        android:text="@string/menuList"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/iv_restaurant"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="0.2"
+                        android:padding="10dp"
+                        android:src="@drawable/restaurant"
+                        android:layout_marginLeft="@dimen/layout_margin5"/>
+
+                    <TextView
+                        android:id="@+id/tv_restaurant"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:padding="6dp"
+                        android:text="@string/restaurant"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/vT_st"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="left"
+                            android:text="Open"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                        <!--<TextView
+                            android:id="@+id/openClosed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Open"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>-->
+                        <Switch
+                            android:id="@+id/openClosed"
+                            style="@style/MySwitch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:layout_marginRight="@dimen/layout_margin10"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="0.2"
+                        android:padding="10dp"
+                        android:src="@drawable/restaurant"
+                        android:layout_marginLeft="@dimen/layout_margin5"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:padding="6dp"
+                        android:text="Table booking"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/vT_tb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="left"
+                            android:text="Open"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                        <!--<TextView
+                            android:id="@+id/openClosed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Open"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>-->
+                        <Switch
+                            android:id="@+id/openClosedT"
+                            style="@style/MySwitch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:layout_marginRight="@dimen/layout_margin10"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="0.2"
+                        android:padding="10dp"
+                        android:src="@drawable/restaurant"
+                        android:layout_marginLeft="@dimen/layout_margin5"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:padding="6dp"
+                        android:text="Sleep mode"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/vT_sm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="left"
+                            android:text="On"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                        <!--<TextView
+                            android:id="@+id/openClosed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Open"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>-->
+                        <Switch
+                            android:id="@+id/openClosedsm"
+                            style="@style/MySwitch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:layout_marginRight="@dimen/layout_margin10"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="0.2"
+                        android:padding="10dp"
+                        android:src="@drawable/restaurant"
+                        android:layout_marginLeft="@dimen/layout_margin5"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:padding="6dp"
+                        android:text="Take Away"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/vT_ta"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="left"
+                            android:text="Available"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                        <!--<TextView
+                            android:id="@+id/openClosed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Open"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>-->
+                        <Switch
+                            android:id="@+id/openClosedta"
+                            style="@style/MySwitch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:layout_marginRight="@dimen/layout_margin10"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/colorNewBlue"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/iv_notification"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:src="@drawable/bell" />
+
+                    <TextView
+                        android:id="@+id/tv_notificationList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="6dp"
+                        android:text="Notifications"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLogOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/iv_Logout"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_logout"
+                        android:layout_marginLeft="@dimen/layout_margin5"/>
+
+                    <TextView
+                        android:id="@+id/tv_Logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="6dp"
+                        android:text="@string/logout"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

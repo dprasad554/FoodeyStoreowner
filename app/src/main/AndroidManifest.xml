@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geekhive.foodeyrestaurant">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".restaurant.activities.QRCodeActivity"></activity>
+        <activity android:name=".restaurant.activities.LandingActivity" />
+        <activity android:name=".restaurant.activities.NewOrderAlert"/>
+        <activity android:name=".grocery.activities.GroceryNewOrderAlert"/>
+        <activity android:name=".cakes.activities.CakeNewOrderAlert"/>
+        <activity
+            android:name=".restaurant.notifications.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.RevenueActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.NewOrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.MenuListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.AddMenu_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.OrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant.activities.SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".restaurant.notifications.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/foodey_logo_" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.geekhive.foodeyrestaurant.provider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".grocery.activities.Grocery_HomeViewOrderActivity" />
+        <activity android:name=".grocery.activities.Grocery_HomeOrderDetailActivity" />
+        <activity android:name=".grocery.activities.Grocery_NewHistoryDetailsActivity" />
+        <activity android:name=".grocery.activities.Grocery_OrderHistoryDetailActivity" />
+        <activity android:name=".grocery.activities.Grocery_AddMenu_Activity" />
+        <activity android:name=".grocery.activities.Grocery_ViewOrderDetailsActivity" />
+        <activity android:name=".grocery.activities.Grocery_NewOrderDetailsActivity" />
+        <activity android:name=".grocery.activities.Grocery_RevenueActivity" />
+        <activity android:name=".grocery.activities.Grocery_OrdersActivity" />
+        <activity android:name=".grocery.activities.Grocery_NotificationActivity" />
+        <activity android:name=".grocery.activities.Grocery_BottomNaviActivity" />
+        <activity android:name=".grocery.activities.Grocery_LoginActivity" />
+        <activity android:name=".cakes.activities.CakeHomeViewOrderActivity" />
+        <activity android:name=".cakes.activities.CakeHomeOrderDetailActivity" />
+        <activity android:name=".cakes.activities.CakeNewHistoryDetailsActivity" />
+        <activity android:name=".cakes.activities.CakeOrderHistoryDetailActivity" />
+        <activity android:name=".cakes.activities.CakeAddMenu_Activity" />
+        <activity android:name=".cakes.activities.CakeViewOrderDetailsActivity" />
+        <activity android:name=".cakes.activities.CakeNewOrderDetailsActivity" />
+        <activity android:name=".cakes.activities.CakeRevenueActivity" />
+        <activity android:name=".cakes.activities.CakeOrdersActivity" />
+        <activity android:name=".cakes.activities.CakeNotificationActivity" />
+        <activity android:name=".cakes.activities.CakeBottomNaviActivity" />
+        <activity android:name=".cakes.activities.CakeLoginActivity" />
+        <activity android:name=".cakes.activities.CakeViewSpecialCakeActivity" />
+    </application>
+
+</manifest>

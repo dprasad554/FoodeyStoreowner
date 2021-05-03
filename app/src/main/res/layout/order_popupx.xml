@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/text_16"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/text_16"
+            android:paddingTop="@dimen/text_16"
+            android:paddingRight="@dimen/text_16"
+            android:text="New Order"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_19"
+            android:textStyle="bold" />
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Will get back to you soon with online payment option"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/layout_margin5"/>-->
+
+        <TextView
+            android:id="@+id/v_online"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Online"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/layout_margin10"
+            android:textSize="@dimen/text_18"/>
+
+    </LinearLayout>
+
+</LinearLayout>
